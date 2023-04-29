@@ -63,7 +63,7 @@ const About = () => {
           textAlign: "center",
         }}
       >
-        <Box display="flex" flexDirection="column" marginTop="10px">
+        <Box display="flex" flexDirection="column" marginTop="5px">
           <Typography
             sx={{
               fontSize: { lg: "35px", md: "30px", sm: "25px", xs: "18px" },
@@ -81,7 +81,7 @@ const About = () => {
               width: "60%",
               marginRight: "auto",
               marginLeft: "auto",
-              marginTop: "18px",
+              marginTop: "10px",
               marginBottom: "30px",
               backgroundColor: "#0750b7",
               height: "1px",
