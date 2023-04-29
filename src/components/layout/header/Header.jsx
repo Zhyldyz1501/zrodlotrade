@@ -45,7 +45,7 @@ function ResponsiveAppBar() {
 
   return (
     <AppBar position="static" color="default" width="100%">
-      <Container maxWidth="true">
+      <Container maxWidth="100%">
         <Toolbar disableGutters>
           <Select
             sx={{

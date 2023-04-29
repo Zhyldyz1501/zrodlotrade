@@ -8,24 +8,36 @@ import { SpinnerCircular } from "spinners-react";
 function App() {
   return (
     <Suspense
-      fallback={<SpinnerCircular
+      fallback={
+        <SpinnerCircular
           size={90}
           thickness={180}
           speed={180}
           color="rgba(57, 66, 172, 1)"
           secondaryColor="rgba(57, 124, 172, 0.54)"
-          style={{ display: "flex", position: "absolute", top: "50%", left: "50%", transform: "translate(-50%, -50%) " }}
-        />}
+          style={{
+            display: "flex",
+            position: "absolute",
+            top: "50%",
+            left: "50%",
+            transform: "translate(-50%, -50%) ",
+          }}
+        />
+      }
     >
-      <Box
-        display="flex"
-        flexWrap="wrap"
-        justifyContent="center"
-        alignItems="center"
-        padding="0px"
-        margin="0px"
-        boxSizing="border-box"
-        width="100%"
+      <div
+        style={{
+          display: "flex",
+          flexWrap: "wrap",
+          justifyContent: "center",
+          alignItems: "center",
+          padding: "0px",
+          margin: "0px",
+          boxSizing: "border-box",
+          width: "100vw",
+          height: "100%",
+          overflow: "hidden",
+        }}
       >
         <Router>
           <ResponsiveAppBar />
@@ -39,7 +51,7 @@ function App() {
           <hr width="80%" />
           <Footer />
         </Router>
-      </Box>
+      </div>
     </Suspense>
   );
 }

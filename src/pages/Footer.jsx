@@ -12,8 +12,19 @@ import { useTranslation } from "react-i18next";
 const Footer = () => {
   const {t} = useTranslation("footer")
   return (
-    <Box width="100%" display="flex" flexWrap="wrap">
-      <div className="max-w-[1240px] mx-auto py-16 px-4 grid lg:grid-cols-3 gap-8 text-gray-500 lg:ml-90 m:ml-90">
+    <Box
+      style={{
+        display: "flex",
+        flexWrap: "wrap",
+        justifyContent: "center",
+        alignItems: "center",
+        padding: "0px",
+        margin: "0px",
+        boxSizing: "border-box",
+        width: "100%",
+        height: "100%",
+      }}
+    >
         <div>
           <div>
             <Box
@@ -70,7 +81,6 @@ const Footer = () => {
             </ul>
           </div>
         </div>
-      </div>
     </Box>
   );
 };

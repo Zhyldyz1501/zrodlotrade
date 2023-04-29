@@ -9,14 +9,17 @@ import Footer from './Footer';
 const Home = () => {
   return (
     <Box
-      display="flex"
-      flexWrap="wrap"
-      justifyContent="center"
-      alignItems="center"
-      padding={0}
-      margin={0}
-      boxSizing="border-box"
-      width="100%"
+      style={{
+        display: "flex",
+        flexWrap: "wrap",
+        justifyContent: "center",
+        alignItems: "center",
+        padding: "0px",
+        margin: "0px",
+        boxSizing: "border-box",
+        width: "100%",
+        height: "100%",
+      }}
     >
       <Stack
         width="100%"

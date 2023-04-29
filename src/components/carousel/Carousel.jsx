@@ -25,11 +25,10 @@ const Carousels = () => {
     <Box
       width="100%"
       height={{ lg: "100%", sm: "70%", md: "90%", xs: "70%" }}
-      boxSizing="border-box"
     >
       <Box
         width={{ lg: "60%", sm: "40%", md: "40%", xs: "50%" }}
-        top={{ lg: "60%", sm: "60%", md: "50%", xs: "50%" }}
+        top={{ lg: "60%", sm: "60%", md: "50%", xs: "60%" }}
         left={{ lg: "50%", sm: "50%", md: "50%", xs: "50%" }}
         boxSizing="border-box"
         style={{
@@ -44,7 +43,7 @@ const Carousels = () => {
           borderRadius: "20px",
           color: "white",
           fontWeight: "bold",
-          padding: "30px",
+          // padding: "30px"
           textAlign: "center",
         }}
       >
