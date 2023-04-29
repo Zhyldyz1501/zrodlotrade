@@ -63,7 +63,7 @@ const About = () => {
           textAlign: "center",
         }}
       >
-        <Box display="flex" flexDirection="column" marginTop="30px">
+        <Box display="flex" flexDirection="column" marginTop="10px">
           <Typography
             sx={{
               fontSize: { lg: "35px", md: "30px", sm: "25px", xs: "18px" },
