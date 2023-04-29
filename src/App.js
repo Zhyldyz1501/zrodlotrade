@@ -22,8 +22,8 @@ function App() {
         flexWrap="wrap"
         justifyContent="center"
         alignItems="center"
-        padding={0}
-        margin={0}
+        padding="0px"
+        margin="0px"
         boxSizing="border-box"
         width="100%"
       >

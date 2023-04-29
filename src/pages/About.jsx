@@ -59,7 +59,7 @@ const About = () => {
           backgroundColor: "rgba(0,0,0, 0.1)",
           color: "inherit",
 
-          padding: "30px",
+          padding: "20px",
           textAlign: "center",
         }}
       >
