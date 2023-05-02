@@ -57,11 +57,11 @@ const Footer = () => {
             </Link>
           </ul>
         </div>
-        <div className="flex flex-wrap">
+        <div>
           <Link to="/contact">
             <h6 className="font-medium text-gray-500 py-4">{t("textfour")}</h6>
           </Link>
-          <ul className="flex-wrap">
+          <ul>
             <li className="py-2 flex space-between">
               <FaEnvelope size={18} />
               <span className="ml-4"> zrodlotrade@gmail.com</span>
