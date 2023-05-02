@@ -17,7 +17,7 @@ const Contact = () => {
         style={{ height: "1000px", width: "100%", objectFit: "cover" }}
       />
       <Box
-        width={{ lg: "60%", sm: "40%", md: "40%", xs: "50%" }}
+        width={{ lg: "60%", sm: "40%", md: "40%", xs: "70%" }}
         top={{ lg: "60%", sm: "60%", md: "60%", xs: "50%" }}
         left={{ lg: "50%", sm: "50%", md: "50%", xs: "50%" }}
         boxSizing="border-box"

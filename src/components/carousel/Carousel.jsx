@@ -22,12 +22,9 @@ const Carousels = () => {
   ];
 
   return (
-    <Box
-      width="100%"
-      height={{ lg: "100%", sm: "70%", md: "90%", xs: "70%" }}
-    >
+    <Box width="100%" height={{ lg: "100%", sm: "70%", md: "90%", xs: "70%" }}>
       <Box
-        width={{ lg: "60%", sm: "40%", md: "40%", xs: "50%" }}
+        width={{ lg: "60%", sm: "40%", md: "40%", xs: "60%" }}
         top={{ lg: "60%", sm: "60%", md: "50%", xs: "60%" }}
         left={{ lg: "50%", sm: "50%", md: "50%", xs: "50%" }}
         boxSizing="border-box"
@@ -59,12 +56,13 @@ const Carousels = () => {
           }}
         />
         <Typography
-          fontSize={{ lg: "50px", md: "35px", sm: "20px" }}
+          fontSize={{ lg: "50px", md: "35px", sm: "20px", sx: "16px" }}
           fontWeight={{ lg: "bold", md: "bold", sm: "normal" }}
           style={{
             transition: "transform .3s cubicBezier(.3, 0, .3, 1)",
             opacity: ".3s linear",
             transitionDelay: "calc( 20ms * var(--char-index) )",
+            paddingBottom: "8px",
           }}
         >
           {t("textone")}
@@ -81,12 +79,13 @@ const Carousels = () => {
           }}
         />
         <Typography
-          fontSize={{ lg: "40px", sm: "15px", md: "25px" }}
+          fontSize={{ lg: "40px", sm: "15px", md: "25px", sx: "14px" }}
           margin={{ lg: "10px", sm: "5px" }}
           style={{
             transition: "transform .3s cubicBezier(.3, 0, .3, 1)",
             opacity: ".3s linear",
             transitionDelay: "calc( 20ms * var(--char-index) )",
+            paddingBottom: "15px",
           }}
         >
           {t("texttwo")}
