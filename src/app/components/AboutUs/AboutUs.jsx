@@ -4,7 +4,7 @@ import Image from "next/image";
 
 function AboutUs() {
   return (
-    <div className="container relative">
+    <div id="about" className="container relative">
       <div className="grid md:grid-cols-12 grid-cols-1 items-center gap-[30px]">
         <div className="md:col-span-5">
           <div className="relative">
@@ -20,7 +20,7 @@ function AboutUs() {
           </div>
         </div>
 
-        <div id="about" className="md:col-span-7">
+        <div className="md:col-span-7">
           <div className="lg:ms-4">
             <h4 className="mb-6 md:text-3xl text-2xl lg:leading-normal leading-normal font-medium">
               We are the foremost experts

@@ -2,18 +2,20 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { Link as Link1 } from 'react-scroll';
 
 import * as Icon from "react-feather";
 
 import {
   FaRegEnvelope,
   FaLinkedin,
-  FaFacebookF,
-  FaInstagram,
+  FaWhatsapp,
+  FaPhone
 } from "react-icons/fa";
 import { MdKeyboardArrowRight } from "react-icons/md";
 
 const Footer = () => {
+
   const footerLinks = [
     {
       liClass: "",
@@ -29,40 +31,35 @@ const Footer = () => {
   const footerCompany = [
     {
       liClass: "",
-      route: "/page-aboutus",
+      route: "about",
       title: "About us",
     },
     {
       liClass: "mt-[10px]",
-      route: "/page-services",
-      title: "Services",
+      route: "products",
+      title: "Products",
     },
     {
-      route: "/page-team",
-      title: "Team",
+      route: "projects",
+      title: "Projects",
       liClass: "mt-[10px]",
     },
     {
-      route: "/page-pricing",
-      title: "Pricing",
-      liClass: "mt-[10px]",
-    },
-    {
-      route: "/portfolio-creative-four",
-      title: "Project",
-      liClass: "mt-[10px]",
-    },
-    {
-      route: "/blog",
+      route: "blog",
       title: "Blog",
       liClass: "mt-[10px]",
     },
-    // {
-    //   route: "/auth-login",
-    //   title: "Login",
-    //   liClass: "mt-[10px]",
-    // },
+    {
+      route: "review",
+      title: "Reviews",
+      liClass: "mt-[10px]",
+    },
   ];
+
+  const phoneNumber = '+48600793088'
+  const whatsappURI = `https://wa.me/${phoneNumber}`
+  const uri = `tel:${phoneNumber}`;
+
   return (
     <div>
       <footer className="footer bg-dark-footer relative text-gray-200 dark:text-gray-200">
@@ -88,20 +85,24 @@ const Footer = () => {
                     </p>
                   </div>
 
-                  <div className="lg:col-span-2 md:col-span-4">
+                  <div className="lg:col-span-2 md:col-span-3">
                     <h5 className="tracking-[1px] text-gray-100 font-semibold">
                       Company
                     </h5>
                     <ul className="list-none footer-list mt-6">
                       {footerCompany.map((data, index) => (
                         <li key={index} className={data.liClass}>
-                          <Link
-                            href={data.route}
+                          <Link1
+                            activeClass="active"
+                            to={data.route}
+                            spy={true}
+                            smooth={true}
+                            duration={500}
                             className="text-gray-300 hover:text-gray-400 duration-500 ease-in-out flex items-center"
                           >
-                            <MdKeyboardArrowRight className="text-xl me-1" />{" "}
+                            <MdKeyboardArrowRight className="text-xl me-1" />
                             {data.title}
-                          </Link>
+                          </Link1>
                         </li>
                       ))}
                     </ul>
@@ -114,19 +115,19 @@ const Footer = () => {
                     <ul className="list-none footer-list mt-6">
                       {footerLinks.map((data, index) => (
                         <li key={index} className={data.liClass}>
-                          <Link
+                          <Link1
                             href={data.route}
                             className="text-gray-300 hover:text-gray-400 duration-500 ease-in-out flex items-center"
                           >
                             <MdKeyboardArrowRight className="text-xl me-1" />{" "}
                             {data.title}
-                          </Link>
+                          </Link1>
                         </li>
                       ))}
                     </ul>
                   </div>
 
-                  <div className="lg:col-span-3 md:col-span-4">
+                  <div className="lg:col-span-1 md:col-span-4">
                     <h5 className="tracking-[1px] text-gray-100 font-semibold">
                       Contact Us
                     </h5>
@@ -134,7 +135,7 @@ const Footer = () => {
                     <ul className="list-none mt-5 space-x-1 space-y-1">
                       <li className="inline">
                         <Link
-                          href="http://linkedin.com/company/shreethemes"
+                          href="https://www.linkedin.com/in/azamat-ismailov/"
                           target="_blank"
                           className="h-11 w-11 inline-flex items-center justify-center tracking-wide align-middle duration-500 text-base text-center border border-gray-800 rounded-md hover:border-indigo-600 dark:hover:border-indigo-600 hover:bg-indigo-600 dark:hover:bg-indigo-600"
                         >
@@ -143,20 +144,20 @@ const Footer = () => {
                       </li>
                       <li className="inline">
                         <Link
-                          href="https://www.facebook.com"
+                          href={whatsappURI}
                           target="_blank"
                           className="h-11 w-11 inline-flex items-center justify-center tracking-wide align-middle duration-500 text-base text-center border border-gray-800 rounded-md hover:border-indigo-600 dark:hover:border-indigo-600 hover:bg-indigo-600 dark:hover:bg-indigo-600"
                         >
-                          <FaFacebookF className="text-sm" />
+                          <FaWhatsapp className="text-sm" />
                         </Link>
                       </li>
                       <li className="inline">
                         <Link
-                          href="https://www.instagram.com"
+                          href={uri}
                           target="_blank"
                           className="h-11 w-11 inline-flex items-center justify-center tracking-wide align-middle duration-500 text-base text-center border border-gray-800 rounded-md hover:border-indigo-600 dark:hover:border-indigo-600 hover:bg-indigo-600 dark:hover:bg-indigo-600"
                         >
-                          <FaInstagram className="text-sm" />
+                          <FaPhone className="me-1 text-sm" />
                         </Link>
                       </li>
                       <li className="inline">
@@ -169,35 +170,6 @@ const Footer = () => {
                         </Link>
                       </li>
                     </ul>
-                    {/* <form>
-                      <div className="grid grid-cols-1">
-                        <div className="foot-subscribe my-3">
-                          <label className="form-label">
-                            Write your email{" "}
-                            <span className="text-red-600">*</span>
-                          </label>
-                          <div className="form-icon relative mt-2">
-                            <Icon.Mail className="w-4 h-4 absolute top-3 start-4" />
-                            <input
-                              type="email"
-                              className="form-input ps-12 rounded w-full py-2 px-3 h-10 bg-gray-800 border-0 text-gray-100 focus:shadow-none focus:ring-0"
-                              placeholder="Email"
-                              name="email"
-                              required=""
-                            />
-                          </div>
-                        </div>
-
-                        <button
-                          type="submit"
-                          id="submitsubscribe"
-                          name="send"
-                          className="py-2 px-5 inline-block font-semibold tracking-wide border align-middle duration-500 text-base text-center bg-indigo-600 hover:bg-indigo-700 border-indigo-600 hover:border-indigo-700 text-white rounded-md"
-                        >
-                          Subscribe
-                        </button>
-                      </div>
-                    </form> */}
                   </div>
                 </div>
               </div>
