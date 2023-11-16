@@ -41,33 +41,23 @@ export const portfolioData = [
 ];
 export const servicesData = [
   {
-    image: "/images/kreton.jpg",
-    title: "Kreton",
+    image: "/images/consulting.jpg",
+    title: "Consulting",
     desc: "The phrasal sequence of the is now so that many campaign and benefit",
   },
   {
-    image: "/images/flannel.jpg",
-    title: "Flannel",
+    image: "/images/analysis.jpg",
+    title: "Analysis",
     desc: "The phrasal sequence of the is now so that many campaign and benefit",
   },
   {
-    image: "/images/ranforce.jpg",
-    title: "Ranforce",
+    image: "/images/investment.jpg",
+    title: "Investment",
     desc: "The phrasal sequence of the is now so that many campaign and benefit",
   },
   {
-    image: "/images/pique.jpg",
-    title: "Pique Fabric",
-    desc: "The phrasal sequence of the is now so that many campaign and benefit",
-  },
-  {
-    image: "/images/cotton.jpg",
-    title: "100% Cotton",
-    desc: "The phrasal sequence of the is now so that many campaign and benefit",
-  },
-  {
-    image: "/images/halfpanama.jpg",
-    title: "Half Panama",
+    image: "/images/tradeing.jpg",
+    title: "Trading",
     desc: "The phrasal sequence of the is now so that many campaign and benefit",
   },
 ];
