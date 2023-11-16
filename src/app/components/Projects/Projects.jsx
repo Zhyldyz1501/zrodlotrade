@@ -7,7 +7,7 @@ import { FiCamera } from "react-icons/fi";
 
 function Projects() {
   return (
-    <div id="projects" className="container relative md:mt-24 mt-16">
+    <div id="projects" className="container relative md:mt-10 mt-3">
       <div className="grid grid-cols-1 pb-8 text-center">
         <h6 className="text-indigo-600 text-sm font-bold uppercase mb-2">
           Services

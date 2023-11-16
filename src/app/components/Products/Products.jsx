@@ -33,7 +33,7 @@ function Products() {
    };
    const currentImage = images[currentImageIndex];
   return (
-    <div id="products" className="container relative md:mt-24 mt-16">
+    <div id="products" className="container relative md:mt-20 mt-10">
       <div className="grid grid-cols-1 pb-8 text-center">
         <h6 className="text-indigo-600 text-sm font-bold uppercase mb-2">
           Products

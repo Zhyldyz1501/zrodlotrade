@@ -7,6 +7,8 @@ import { HiOutlineMoon, HiOutlineSun, HiArrowSmUp } from "react-icons/hi";
 
 const Switcher = () => {
   const [scrollToTops, setScrollToTops] = useState(false);
+  const [darkMode, setDarkMode] = useState(false)
+
   useEffect(() => {
     if (typeof window !== "undefined") {
       window.addEventListener("scroll", () => {
@@ -22,16 +24,24 @@ const Switcher = () => {
     });
   };
 
+  useEffect(() => {
+    const isDarkModeEnabled = localStorage.getItem("darkMode") === "true";
+    setDarkMode(isDarkModeEnabled);
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem("darkMode", darkMode.toString());
+    document.documentElement.classList.toggle("dark", darkMode);
+  }, [darkMode]);
+
   function changeMode(mode, event) {
-    switch (mode) {
-      case "mode":
-        if (document.documentElement.className.includes("dark")) {
-          document.documentElement.className = "light";
-        } else {
-          document.documentElement.className = "dark";
-        }
-        break;
-    }
+     switch (mode) {
+       case "mode":
+         setDarkMode((prevDarkMode) => !prevDarkMode);
+         break;
+       default:
+         break;
+     }
   }
   return (
     <>

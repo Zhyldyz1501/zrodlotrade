@@ -9,9 +9,9 @@ import { FiPhone } from "react-icons/fi";
 const Navbar = dynamic(() => import("./components/Navbar/Navbar"));
 const Footer = dynamic(() => import("./components/Footer/Footer"));
 const Switcher = dynamic(() => import("./components/Switcher/Switcher"));
-const CookieModal = dynamic(() =>
-  import("./components/CookieModal/CookieModal")
-);
+// const CookieModal = dynamic(() =>
+//   import("./components/CookieModal/CookieModal")
+// );
 const AboutUs = dynamic(() => import("./components/AboutUs/AboutUs"));
 const Products = dynamic(() => import("./components/Products/Products"));
 const Projects = dynamic(()=> import("./components/Projects/Projects"))
@@ -103,9 +103,9 @@ function App() {
       </div>
 
       <section className="relative md:py-24 py-16">
-        <AboutUs id={""} className={"container relative"} />
+        <Projects id={""} className={"container relative md:mt-24 mt-16"} />
         <Products id={""} className={"container relative"} />
-
+        <AboutUs id={""} className={"container relative"} />
         <div className="container-fluid relative md:mt-24 mt-16">
           <div className="grid grid-cols-1 py-36 bg-center bg-no-repeat bg-cover">
             <div className="absolute top-0 start-0 w-full h-full z-0 pointer-events-none overflow-hidden">
@@ -148,8 +148,6 @@ function App() {
             </div>
           </div>
         </div>
-
-        <Projects id={""} className={"container relative md:mt-24 mt-16"} />
         <div className=" md:mt-24 mt-16">
           <ClientsOne />
         </div>
@@ -158,7 +156,7 @@ function App() {
       </section>
       <Footer />
       <Switcher />
-      <CookieModal />
+      {/* <CookieModal /> */}
     </>
   );
 }

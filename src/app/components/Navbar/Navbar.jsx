@@ -45,55 +45,42 @@ const Navbar = ()  =>{
       id="topnav"
       className={`${navbarSticky ? "nav-sticky" : " defaultscroll"}`}
     >
-      <div className="container relative">
-        <Link className="logo" href="/">
-          <Image
-            src="/images/logo-dark.png"
-            width={138}
-            height={24}
-            className="inline-block dark:hidden"
-            alt=""
-          />
-          <Image
-            src="/images/logo-dark.png"
-            width={138}
-            height={24}
-            className="hidden dark:inline-block"
-            alt=""
-          />
-        </Link>
+        <div className="container relative">
+          <Link className="logo" href="/">
+            <Image
+              src="/images/logo-dark.png"
+              width={138}
+              height={24}
+              className="inline-block dark:hidden"
+              alt=""
+            />
+            <Image
+              src="/images/logo-dark.png"
+              width={138}
+              height={24}
+              className="hidden dark:inline-block"
+              alt=""
+            />
+          </Link>
 
-        <div className="menu-extras">
-          <div className="menu-item">
-            <Link
-              href="#"
-              className={`navbar-toggle ${isMenu ? "open" : ""}`}
-              id="isToggle"
-              onClick={() => toggleMenu()}
-            >
-              <div className="lines">
-                <span></span>
-                <span></span>
-                <span></span>
-              </div>
-            </Link>
+          <div className="menu-extras">
+            <div className="menu-item">
+              <Link
+                href="#"
+                className={`navbar-toggle ${isMenu ? "open" : ""}`}
+                id="isToggle"
+                onClick={() => toggleMenu()}
+              >
+                <div className="lines">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+              </Link>
+            </div>
           </div>
-        </div>
-
         <div id="navigation" style={{ display: isMenu ? "block" : "none" }}>
           <ul className="navigation-menu justify-end" id="navmenu-nav">
-            <li className="has-submenu">
-              <Link1
-                to="#"
-                activeClass="active"
-                spy={true}
-                smooth={true}
-                duration={500}
-                className="sub-menu-item"
-              >
-                Home
-              </Link1>
-            </li>
             <li className="has-submenu">
               <Link1
                 activeClass="active"
