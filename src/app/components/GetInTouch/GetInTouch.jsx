@@ -3,15 +3,7 @@ import React from "react";
 import Link from "next/link";
 import { FiPhone } from "react-icons/fi";
 
-const GetInTouch = ({ className, title }) => {
-  const handleContactButtonClick = () => {
-     
-       const phoneNumber = "+48600793088"; 
-
-       const uri = `tel:${phoneNumber}`;
-
-       window.location.href = uri;
-     };
+const GetInTouch = ({ className, title, handleContactButtonClick }) => {
   return (
     <div className={className}>
       <div className="grid grid-cols-1 text-center">
@@ -43,5 +35,5 @@ const GetInTouch = ({ className, title }) => {
       </div>
     </div>
   );
- }
+};
 export default GetInTouch;

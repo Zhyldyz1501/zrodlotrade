@@ -130,18 +130,6 @@ const Navbar = ()  =>{
               </Link1>
             </li>
             <li className="has-submenu">
-              <Link1
-                activeClass="active"
-                to="blog"
-                spy={true}
-                smooth={true}
-                duration={500}
-                className="sub-menu-item"
-              >
-                Blog
-              </Link1>
-            </li>
-            <li className="has-submenu">
               <Link
                 href="#aboutUs"
                 className="sub-menu-item"

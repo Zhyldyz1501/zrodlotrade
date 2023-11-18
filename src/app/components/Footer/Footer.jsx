@@ -4,8 +4,6 @@ import Link from "next/link";
 import Image from "next/image";
 import { Link as Link1 } from 'react-scroll';
 
-import * as Icon from "react-feather";
-
 import {
   FaRegEnvelope,
   FaLinkedin,

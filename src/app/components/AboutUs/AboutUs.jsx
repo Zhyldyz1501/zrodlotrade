@@ -4,7 +4,7 @@ import Image from "next/image";
 
 function AboutUs() {
   return (
-    <div id="about" className="container relative">
+    <div id="projects" className="container relative">
       <div className="grid md:grid-cols-12 grid-cols-1 items-center gap-[30px]">
         <div className="md:col-span-5">
           <div className="relative">
@@ -27,11 +27,10 @@ function AboutUs() {
               <br /> in the fabric and yarn business
             </h4>
             <p className="text-slate-400 max-w-xl">
-              We take pride in offering top-notch customer service. We
+              We offering top-notch customer service. We
               understand that choosing the right fabric for your project can be
               overwhelming. We can help you find the perfect fabric for your
-              specific needs, whether you are creating a cozy blanket or a
-              stunning piece of clothing. In addition to our extensive selection
+              specific needs. In addition to our extensive selection
               of fabrics, we also offer competitive pricing and fast, reliable
               shipping. We know that time is of the essence when it comes to
               completing your projects, which is why we work hard to get your

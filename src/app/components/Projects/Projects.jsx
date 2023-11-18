@@ -6,8 +6,9 @@ import { FaArrowRight } from "react-icons/fa";
 import { FiCamera } from "react-icons/fi";
 
 function Projects() {
+   console.log("data", servicesData);
   return (
-    <div id="projects" className="container relative md:mt-10 mt-3">
+    <div id="about" className="container relative md:mt-10 mt-3">
       <div className="grid grid-cols-1 pb-8 text-center">
         <h6 className="text-indigo-600 text-sm font-bold uppercase mb-2">
           Services
@@ -17,11 +18,11 @@ function Projects() {
         </h3>
 
         <p className="text-slate-400 max-w-xl mx-auto">
-          Our extensive network across Europe allows us to source an array of
-          high-quality products from various countries. Whether it is artisanal
-          cheese from France, precision machinery from Germany, or fashionable
-          textiles from Italy, we have got the connections to fulfill your
-          inventory needs.
+          Discover a world of possibilities with us! We provide tailored
+          solutions to meet your needs. From expert consulting to seamless
+          logistics, we offer comprehensive services designed to elevate your
+          business. Explore new opportunities and achieve success with our
+          dedicated support.
         </p>
       </div>
 
@@ -68,12 +69,12 @@ function Projects() {
                 <p className="text-slate-400 mt-3">{item.desc}</p>
 
                 <div className="mt-5">
-                  <Link
-                    href="/page-services"
+                  {/* <Link
+                    href="#"
                     className="relative inline-flex items-center font-semibold tracking-wide align-middle text-base text-center border-none after:content-[''] after:absolute after:h-px after:w-0 hover:after:w-full after:end-0 hover:after:end-auto after:bottom-0 after:start-0 after:duration-500 text-indigo-600 hover:text-indigo-600 after:bg-indigo-600 duration-500"
                   >
                     Read More <FaArrowRight className="ms-2 text-[10px]" />
-                  </Link>
+                  </Link> */}
                 </div>
               </div>
             </div>

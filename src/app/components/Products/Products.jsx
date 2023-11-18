@@ -43,9 +43,9 @@ function Products() {
         </h3>
 
         <p className="text-slate-400 max-w-xl mx-auto">
-          At our company we specialize in providing high-quality row fabrics to
-          meet the diverse needs of our customers. Our extensive collection of
-          fabrics includes:
+          Discover a world of possibilities for your business in
+          textiles with our wholesale offerings. Our extensive collection of
+          fabrics and yarns includes:
         </p>
       </div>
 

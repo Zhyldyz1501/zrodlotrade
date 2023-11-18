@@ -38,72 +38,64 @@ export const portfolioData = [
     name: "Ranforce",
     title: "Ranforce fabric is a type of fabric that is made from 100% cotton.",
   },
+  {
+    image: "/images/shopper.jpg",
+    name: "Shopper",
+    title: "Shopper is made from 100% cotton.",
+  },
+  {
+    image: "/images/yarns.jpg",
+    name: "Yarns",
+    title: "Different types of yarns made from 100% cotton",
+  },
 ];
+
 export const servicesData = [
   {
     image: "/images/consulting.jpg",
     title: "Consulting",
-    desc: "The phrasal sequence of the is now so that many campaign and benefit",
+    desc: "We're here to make your European business journey smooth. Our company offers consulting services for buying and selling goods to legal guidance. Whether you need help importing, exporting, or navigating legal matters, count on us as your dedicated partner for success in Europe.",
   },
   {
     image: "/images/analysis.jpg",
     title: "Analysis",
-    desc: "The phrasal sequence of the is now so that many campaign and benefit",
+    desc: "Specializing in thorough analysis, we help businesses gain valuable insights into markets, trends, and opportunities. Whether it's market research, performance evaluation, or strategic planning, our team is committed to providing the analytical support you need to make informed decisions and drive your business forward.",
   },
   {
     image: "/images/investment.jpg",
     title: "Investment",
-    desc: "The phrasal sequence of the is now so that many campaign and benefit",
+    desc: "Unlock potential with our investment consulting services. Whether you are seeking a niche to invest in or looking for financial support for your business, we've got you covered. Our team specializes in identifying investment opportunitie or providing direct investment in your business.",
   },
   {
     image: "/images/tradeing.jpg",
     title: "Trading",
-    desc: "The phrasal sequence of the is now so that many campaign and benefit",
+    desc: "We make buying and selling goods in Europe easy. Our team helps with logistics and advice, so you can focus on your business. Whether you're shipping products or looking to expand, we've got your back. Simple solutions for your European trade journey.",
   },
 ];
+
 export const clientsData = [
   {
     description:
-      " It seems that only fragments of the original text remain in the Lorem Ipsum texts used today. ",
-    image: "/images/cotton.jpg",
-    name: "Calvin Carlo",
-    role: "Manager",
+      "The Chamber of Commerce and Industry of Kyrgyzstan commends their dedication, professionalism, and positive impact on businesses in the Kyrgyz Republic",
+    image: "/images/tpp.svg",
+    name: "Chamber of Commerce and Industry of Kyrgyzstan",
+    role: " ",
   },
   {
-    description: ` The most well-known dummy text is the Lorem Ipsum, which is said to have originated in the 16th century. `,
-    image: "/images/cotton.jpg",
-    name: "Christa Smith",
-    role: "Manager",
-  },
-  {
-    description:
-      " One disadvantage of Lorum Ipsum is that in Latin certain letters appear more frequently than others. ",
-    image: "/images/cotton.jpg",
-    name: "Jemina CLone",
-    role: "Manager",
+    description: ` Their services have significantly benefited our members fostering growth in the berry industry. We appreciate their dedication to our agricultural sector and highly recommend them as a trusted partner. `,
+    image: "/images/momo.jpg",
+    name: "Association of Berry Growers of Kyrgyzstan",
+    role: "",
   },
   {
     description:
-      " Thus, Lorem Ipsum has only limited suitability as a visual filler for German texts. ",
-    image: "/images/cotton.jpg",
-    name: "Smith Vodka",
-    role: "Manager",
-  },
-  {
-    description:
-      " There is now an abundance of readable dummy texts. These are usually used when a text is required. ",
-    image: "/images/cotton.jpg",
-    name: "Cristino Murfi",
-    role: "Manager",
-  },
-  {
-    description:
-      " According to most sources, Lorum Ipsum can be traced back to a text composed by Cicero. ",
-    image: "/images/cotton.jpg",
-    name: "Cristino Murfi",
-    role: "Manager",
+      "An invaluable partner! Zrodlo Trade played a huge role in facilitating meetings for the State Mortgage Company of Kyrgyz Republic in Europe",
+    image: "/images/smc.png",
+    name: "State Mortgage Company",
+    role: "",
   },
 ];
+
 export const blogData = [
   {
     id: 1,
