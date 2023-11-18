@@ -52,8 +52,10 @@ import "../../../../node_modules/tiny-slider/dist/tiny-slider.css";
         )}
 
         <p className="text-slate-400 max-w-xl mx-auto">
-          Start working with Techwind that can provide everything you need to
-          generate awareness, drive traffic, connect.
+          Our partners speak highly of us! They value our commitment,
+          reliability, and the seamless collaboration we bring to the table.
+          Read what our partners have to say about the positive impact we have had
+          on their businesses
         </p>
       </div>
 

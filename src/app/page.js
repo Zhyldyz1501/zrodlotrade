@@ -2,36 +2,33 @@
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import dynamic from "next/dynamic";
-import { FiPhone } from "react-icons/fi";
-
-
-const Navbar = dynamic(() => import("./components/Navbar/Navbar"));
-const Footer = dynamic(() => import("./components/Footer/Footer"));
-const Switcher = dynamic(() => import("./components/Switcher/Switcher"));
-// const CookieModal = dynamic(() =>
-//   import("./components/CookieModal/CookieModal")
-// );
-const AboutUs = dynamic(() => import("./components/AboutUs/AboutUs"));
-const Products = dynamic(() => import("./components/Products/Products"));
-const Projects = dynamic(()=> import("./components/Projects/Projects"))
-const ClientsOne = dynamic(() => import("./components/ClientsOne/ClientsOne"));
-const GetInTuct = dynamic(() => import("./components/GetInTouch/GetInTouch"));
-const Blog = dynamic(() => import("./components/Blog/Blog"));
-
+import Navbar from "./components/Navbar/Navbar";
+import Footer from "./components/Footer/Footer";
+import Switcher from "./components/Switcher/Switcher";
+import AboutUs from "./components/AboutUs/AboutUs";
+import Products from "./components/Products/Products";
+import Projects from "./components/Projects/Projects";
+import ClientsOne from "./components/ClientsOne/ClientsOne";
+import GetInTouch from "./components/GetInTouch/GetInTouch";
+import Video from "./components/Video/Video";
 import "../../node_modules/react-modal-video/css/modal-video.css";
- 
 import "react-18-image-lightbox/style.css";
  
- 
-
 function App() {
+  
   useEffect(() => {
     if (typeof window !== "undefined") {
       document.documentElement.classList.add("light");
     }
   }, []);
-  const [isOpen, setOpen] = useState(false);
+
+  const handleContactButtonClick = () => {
+      const phoneNumber = "+48600793088";
+
+      const uri = `tel:${phoneNumber}`;
+
+      window.location.href = uri;
+    };
 
   return (
     <>
@@ -104,59 +101,22 @@ function App() {
 
       <section className="relative md:py-24 py-16">
         <Projects id={""} className={"container relative md:mt-24 mt-16"} />
-        <Products id={""} className={"container relative"} />
-        <AboutUs id={""} className={"container relative"} />
-        <div className="container-fluid relative md:mt-24 mt-16">
-          <div className="grid grid-cols-1 py-36 bg-center bg-no-repeat bg-cover">
-            <div className="absolute top-0 start-0 w-full h-full z-0 pointer-events-none overflow-hidden">
-              <video
-                src="/images/fabrics.mp4"
-                autoPlay
-                loop
-                className="absolute top-1/2 start-1/2 ltr:-translate-x-1/2 rtl:translate-x-1/2 -translate-y-1/2 w-screen h-[56.25vw] min-h-screen min-w-[177.77vw]"
-              ></video>
-              {/* ?background=1&autoplay=1&loop=1&byline=0&title=0 */}
-            </div>
-            <div className="absolute inset-0 bg-slate-900/70"></div>
-            <div className="container relative">
-              <div className="grid grid-cols-1 text-center">
-                <h3 className="mb-4 md:text-3xl text-2xl text-white font-medium">
-                  Partner with Zrodlo Trade – Your One-Stop Solution.
-                </h3>
-
-                <p className="text-white/80 max-w-xl mx-auto">
-                  Unlock the Best of Europe with Zrodlo Trade!
-                </p>
-                <div className="mt-6">
-                  <Link
-                    href="/contact-one"
-                    className="py-2 px-5 inline-flex items-center font-semibold tracking-wide border align-middle duration-500 text-base text-center bg-indigo-600 hover:bg-indigo-700 border-indigo-600 hover:border-indigo-700 text-white rounded-md mt-4"
-                  >
-                    <FiPhone className="me-1 text-lg" /> Contact us
-                  </Link>
-                </div>
-
-                {/* <Link
-                  href="#"
-                  onClick={() => setOpen(true)}
-                  data-id="S_CGed6E610"
-                  className="lightbox h-20 w-20 rounded-full shadow-lg dark:shadow-gray-800 inline-flex items-center justify-center bg-white dark:bg-slate-900 text-indigo-600 mx-auto mt-10"
-                >
-                  <i className="mdi mdi-play inline-flex items-center justify-center text-2xl"></i>
-                </Link> */}
-              </div>
-            </div>
-          </div>
+        <Video handleContactButtonClick={handleContactButtonClick} />
+        <div className=" md:mt-24 mt-16">
+          <AboutUs id={""} className={"container relative"} />
+        </div>
+        <div className=" md:mt-24 mt-16">
+          <Products id={""} className={"container relative"} />
         </div>
         <div className=" md:mt-24 mt-16">
           <ClientsOne />
         </div>
-        <Blog className={"container relative md:py-24 py-16"} id={""} />
-        <GetInTuct />
+        <div className=" md:mt-24 mt-16">
+          <GetInTouch handleContactButtonClick={handleContactButtonClick} />
+        </div>
       </section>
       <Footer />
       <Switcher />
-      {/* <CookieModal /> */}
     </>
   );
 }
