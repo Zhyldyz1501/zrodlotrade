@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Link as Link1 } from "react-scroll";
 import Image from "next/image";
 import * as Icon from "react-feather";
+import { FaEnvelope, FaLocationArrow, FaPhone} from "react-icons/fa";
 
 const Navbar = ()  =>{
   const [isMenu, setisMenu] = useState(false);
@@ -45,40 +46,40 @@ const Navbar = ()  =>{
       id="topnav"
       className={`${navbarSticky ? "nav-sticky" : " defaultscroll"}`}
     >
-        <div className="container relative">
-          <Link className="logo" href="/">
-            <Image
-              src="/images/logo-dark.png"
-              width={138}
-              height={24}
-              className="inline-block dark:hidden"
-              alt=""
-            />
-            <Image
-              src="/images/logo-dark.png"
-              width={138}
-              height={24}
-              className="hidden dark:inline-block"
-              alt=""
-            />
-          </Link>
+      <div className="container relative">
+        <Link className="logo" href="/">
+          <Image
+            src="/images/logo-dark.png"
+            width={138}
+            height={24}
+            className="inline-block dark:hidden"
+            alt=""
+          />
+          <Image
+            src="/images/logo-dark.png"
+            width={138}
+            height={24}
+            className="hidden dark:inline-block"
+            alt=""
+          />
+        </Link>
 
-          <div className="menu-extras">
-            <div className="menu-item">
-              <Link
-                href="#"
-                className={`navbar-toggle ${isMenu ? "open" : ""}`}
-                id="isToggle"
-                onClick={() => toggleMenu()}
-              >
-                <div className="lines">
-                  <span></span>
-                  <span></span>
-                  <span></span>
-                </div>
-              </Link>
-            </div>
+        <div className="menu-extras">
+          <div className="menu-item">
+            <Link
+              href="#"
+              className={`navbar-toggle ${isMenu ? "open" : ""}`}
+              id="isToggle"
+              onClick={() => toggleMenu()}
+            >
+              <div className="lines">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </Link>
           </div>
+        </div>
         <div id="navigation" style={{ display: isMenu ? "block" : "none" }}>
           <ul className="navigation-menu justify-end" id="navmenu-nav">
             <li className="has-submenu">
@@ -152,7 +153,7 @@ const Navbar = ()  =>{
             <div className="relative w-full h-auto max-w-md p-4">
               <div className="relative bg-white dark:bg-slate-900 rounded-lg shadow dark:shadow-gray-800">
                 <div className="flex justify-between items-center px-6 py-4 border-b border-gray-100 dark:border-gray-700">
-                  <h5 className="text-xl font-semibold">Contact Form</h5>
+                  <h5 className="text-xl font-semibold">Contact Us</h5>
                   <button
                     type="button"
                     onClick={() => setModal(!modal)}
@@ -173,89 +174,45 @@ const Navbar = ()  =>{
                   </button>
                 </div>
                 <div className="p-6 text-center">
-                  <form>
-                    <div className="grid lg:grid-cols-12 lg:gap-6">
-                      <div className="lg:col-span-6 mb-5">
-                        <div className="text-start">
-                          <label htmlFor="name" className="font-semibold">
-                            Your Name:
-                          </label>
-                          <div className="form-icon relative mt-2">
-                            <Icon.User className="w-4 h-4 absolute top-3 start-4"></Icon.User>
-                            <input
-                              name="name"
-                              id="name"
-                              type="text"
-                              className="form-input ps-11 w-full py-2 px-3 h-10 bg-transparent dark:bg-slate-900 dark:text-slate-200 rounded outline-none border border-gray-200 focus:border-indigo-600 dark:border-gray-800 dark:focus:border-indigo-600 focus:ring-0"
-                              placeholder="Name :"
-                            />
-                          </div>
-                        </div>
-                      </div>
-
-                      <div className="lg:col-span-6 mb-5">
-                        <div className="text-start">
-                          <label htmlFor="email" className="font-semibold">
-                            Your Email:
-                          </label>
-                          <div className="form-icon relative mt-2">
-                            <Icon.Mail className="w-4 h-4 absolute top-3 start-4"></Icon.Mail>
-                            <input
-                              name="email"
-                              id="email"
-                              type="email"
-                              className="form-input ps-11 w-full py-2 px-3 h-10 bg-transparent dark:bg-slate-900 dark:text-slate-200 rounded outline-none border border-gray-200 focus:border-indigo-600 dark:border-gray-800 dark:focus:border-indigo-600 focus:ring-0"
-                              placeholder="Email :"
-                            />
-                          </div>
+                  <div className="grid lg:grid-cols-12 lg:gap-6">
+                    <div className="lg:col-span-6 mb-5">
+                      <div className="text-start">
+                        <h1 className="font-semibold">Adress:</h1>
+                        <div className="form-icon relative mt-2">
+                          <FaLocationArrow className="w-4 h-4 absolute top-3 start-4" />
+                          <h3 className="ps-11 w-full py-2 px-3 h-10">
+                            01-227, Warszawa, ul. Jana Szymczaka 1/LU 1.
+                          </h3>
                         </div>
                       </div>
                     </div>
 
-                    <div className="grid grid-cols-1">
-                      <div className="mb-5">
-                        <div className="text-start">
-                          <label htmlFor="subject" className="font-semibold">
-                            Your Question:
-                          </label>
-                          <div className="form-icon relative mt-2">
-                            <Icon.Book className="w-4 h-4 absolute top-3 start-4"></Icon.Book>
-                            <input
-                              name="subject"
-                              id="subject"
-                              className="form-input ps-11 w-full py-2 px-3 h-10 bg-transparent dark:bg-slate-900 dark:text-slate-200 rounded outline-none border border-gray-200 focus:border-indigo-600 dark:border-gray-800 dark:focus:border-indigo-600 focus:ring-0"
-                              placeholder="Subject :"
-                            />
-                          </div>
-                        </div>
-                      </div>
-
-                      <div className="mb-5">
-                        <div className="text-start">
-                          <label htmlFor="comments" className="font-semibold">
-                            Your Comment:
-                          </label>
-                          <div className="form-icon relative mt-2">
-                            <Icon.MessageCircle className="w-4 h-4 absolute top-3 start-4"></Icon.MessageCircle>
-                            <textarea
-                              name="comments"
-                              id="comments"
-                              className="form-input ps-11 w-full py-2 px-3 h-28 bg-transparent dark:bg-slate-900 dark:text-slate-200 rounded outline-none border border-gray-200 focus:border-indigo-600 dark:border-gray-800 dark:focus:border-indigo-600 focus:ring-0"
-                              placeholder="Message :"
-                            ></textarea>
-                          </div>
+                    <div className="lg:col-span-6 mb-5">
+                      <div className="text-start">
+                        <h1 className="font-semibold">Phone:</h1>
+                        <div className="form-icon relative mt-2">
+                          <FaPhone className="w-4 h-4 absolute top-3 start-4" />
+                          <h3 className="ps-11 w-full py-2 px-3 h-10">
+                            +48 600 793 088
+                          </h3>
                         </div>
                       </div>
                     </div>
-                    <button
-                      type="submit"
-                      id="submit"
-                      name="send"
-                      className="py-2 px-5 font-semibold tracking-wide border align-middle duration-500 text-base text-center bg-indigo-600 hover:bg-indigo-700 border-indigo-600 hover:border-indigo-700 text-white rounded-md justify-center flex items-center"
-                    >
-                      Send Message
-                    </button>
-                  </form>
+                  </div>
+
+                  <div className="grid grid-cols-1">
+                    <div className="mb-5">
+                      <div className="text-start">
+                        <h1 className="font-semibold">Email:</h1>
+                        <div className="form-icon relative mt-2">
+                          <FaEnvelope className="w-4 h-4 absolute top-3 start-4" />
+                          <h3 className="ps-11 w-full py-2 px-3 h-10">
+                            zrodlotrade@gmail.com
+                          </h3>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
