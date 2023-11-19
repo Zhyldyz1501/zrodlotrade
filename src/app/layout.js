@@ -1,7 +1,7 @@
 import "../app/assetss/css/tailwind.css";
 import '../app/assetss/css/material.css';
-import { Nunito, Work_Sans, EB_Garamond, Kaushan_Script, Alex_Brush } from 'next/font/google'
-
+import { Nunito, Work_Sans, EB_Garamond, Kaushan_Script, Alex_Brush } from 'next/font/google';
+import faviconImage from '../../build/favicomatic/favicon-32x32.png'
 
 const nunito = Nunito({
   subsets: ['latin'],
@@ -40,14 +40,19 @@ const alex = Alex_Brush({
 
 
 export const metadata = {
-  title: 'Zrodlo Trade',
-  description: 'Make business with Zrodlo Trade',
-}
+  title: "Zrodlo Trade",
+  description: "Make business with Zrodlo Trade",
+  image: '../../build/favicomatic/favicon-32x32.png',
+};
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en" dir="LTR">
-      <body className={`${nunito.variable} ${work_sans.variable} ${eb_garamond.variable} ${kaushan.variable} ${alex.variable} font-nunito text-base text-black dark:text-white dark:bg-slate-900`}>{children}</body>
+      <body
+        className={`${nunito.variable} ${work_sans.variable} ${eb_garamond.variable} ${kaushan.variable} ${alex.variable} font-nunito text-base text-black dark:text-white dark:bg-slate-900`}
+      >
+        {children}
+      </body>
     </html>
-  )
+  );
 }
