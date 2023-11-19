@@ -14,18 +14,6 @@ import { MdKeyboardArrowRight } from "react-icons/md";
 
 const Footer = () => {
 
-  const footerLinks = [
-    {
-      liClass: "",
-      route: "/page-terms",
-      title: "Terms of Services",
-    },
-    {
-      liClass: "mt-[10px]",
-      route: "/page-privacy",
-      title: "Privacy Policy",
-    } 
-  ];
   const footerCompany = [
     {
       liClass: "",
@@ -40,11 +28,6 @@ const Footer = () => {
     {
       route: "projects",
       title: "Projects",
-      liClass: "mt-[10px]",
-    },
-    {
-      route: "blog",
-      title: "Blog",
       liClass: "mt-[10px]",
     },
     {
@@ -106,25 +89,6 @@ const Footer = () => {
                     </ul>
                   </div>
 
-                  <div className="lg:col-span-3 md:col-span-4">
-                    <h5 className="tracking-[1px] text-gray-100 font-semibold">
-                      Usefull Links
-                    </h5>
-                    <ul className="list-none footer-list mt-6">
-                      {footerLinks.map((data, index) => (
-                        <li key={index} className={data.liClass}>
-                          <Link1
-                            href={data.route}
-                            className="text-gray-300 hover:text-gray-400 duration-500 ease-in-out flex items-center"
-                          >
-                            <MdKeyboardArrowRight className="text-xl me-1" />{" "}
-                            {data.title}
-                          </Link1>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-
                   <div className="lg:col-span-1 md:col-span-4">
                     <h5 className="tracking-[1px] text-gray-100 font-semibold">
                       Contact Us
@@ -135,36 +99,36 @@ const Footer = () => {
                         <Link
                           href="https://www.linkedin.com/in/azamat-ismailov/"
                           target="_blank"
-                          className="h-11 w-11 inline-flex items-center justify-center tracking-wide align-middle duration-500 text-base text-center border border-gray-800 rounded-md hover:border-indigo-600 dark:hover:border-indigo-600 hover:bg-indigo-600 dark:hover:bg-indigo-600"
+                          className="h-12 w-12 inline-flex items-center justify-center tracking-wide align-middle duration-500 text-base text-center border border-gray-800 rounded-md hover:border-indigo-600 dark:hover:border-indigo-600 hover:bg-indigo-600 dark:hover:bg-indigo-600"
                         >
-                          <FaLinkedin className="text-sm" />
+                          <FaLinkedin className="text-lg" />
                         </Link>
                       </li>
                       <li className="inline">
                         <Link
                           href={whatsappURI}
                           target="_blank"
-                          className="h-11 w-11 inline-flex items-center justify-center tracking-wide align-middle duration-500 text-base text-center border border-gray-800 rounded-md hover:border-indigo-600 dark:hover:border-indigo-600 hover:bg-indigo-600 dark:hover:bg-indigo-600"
+                          className="h-12 w-12 inline-flex items-center justify-center tracking-wide align-middle duration-500 text-base text-center border border-gray-800 rounded-md hover:border-indigo-600 dark:hover:border-indigo-600 hover:bg-indigo-600 dark:hover:bg-indigo-600"
                         >
-                          <FaWhatsapp className="text-sm" />
+                          <FaWhatsapp className="text-lg" />
                         </Link>
                       </li>
                       <li className="inline">
                         <Link
                           href={uri}
                           target="_blank"
-                          className="h-11 w-11 inline-flex items-center justify-center tracking-wide align-middle duration-500 text-base text-center border border-gray-800 rounded-md hover:border-indigo-600 dark:hover:border-indigo-600 hover:bg-indigo-600 dark:hover:bg-indigo-600"
+                          className="h-12 w-12 inline-flex items-center justify-center tracking-wide align-middle duration-500 text-base text-center border border-gray-800 rounded-md hover:border-indigo-600 dark:hover:border-indigo-600 hover:bg-indigo-600 dark:hover:bg-indigo-600"
                         >
-                          <FaPhone className="me-1 text-sm" />
+                          <FaPhone className="me-1 text-lg" />
                         </Link>
                       </li>
                       <li className="inline">
                         <Link
                           href="mailto:zrodlotrade@gmail.com"
                           target="_blank"
-                          className="h-11 w-11 inline-flex items-center justify-center tracking-wide align-middle duration-500 text-base text-center border border-gray-800 rounded-md hover:border-indigo-600 dark:hover:border-indigo-600 hover:bg-indigo-600 dark:hover:bg-indigo-600"
+                          className="h-12 w-12 inline-flex items-center justify-center tracking-wide align-middle duration-500 text-base text-center border border-gray-800 rounded-md hover:border-indigo-600 dark:hover:border-indigo-600 hover:bg-indigo-600 dark:hover:bg-indigo-600"
                         >
-                          <FaRegEnvelope className=" text-sm" />
+                          <FaRegEnvelope className=" text-lg" />
                         </Link>
                       </li>
                     </ul>
