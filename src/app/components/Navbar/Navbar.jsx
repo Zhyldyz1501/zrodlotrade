@@ -21,54 +21,26 @@ const Navbar = ()  =>{
       document.body.scrollTop >= 50 || document.documentElement.scrollTop >= 50
     );
   }
+
   const toggleMenu = () => {
     setisMenu(!isMenu);
-  };
-
-  const handleSubMenuClick = (event) => {
-    const target = event.currentTarget.getAttribute("href");
-    if (target !== "") {
-      const submenu = event.currentTarget.nextElementSibling;
-      if (submenu) {
-        submenu.classList.toggle("open");
-      }
+    if (document.getElementById("navigation")) {
+      const anchorArray = Array.from(
+        document.getElementById("navigation").getElementsByTagName("a")
+      );
+      anchorArray.forEach((element) => {
+        element.addEventListener("click", (elem) => {
+          const target = elem.target.getAttribute("href");
+          if (target !== "") {
+            if (elem.target.nextElementSibling) {
+              var submenu = elem.target.nextElementSibling.nextElementSibling;
+              submenu.classList.toggle("open");
+            }
+          }
+        });
+      });
     }
   };
-
-  useEffect(() => {
-    const anchorArray = Array.from(
-      document.getElementById("navigation").getElementsByTagName("a")
-    );
-    anchorArray.forEach((element) => {
-      element.addEventListener("click", handleSubMenuClick);
-    });
-
-    return () => {
-      anchorArray.forEach((element) => {
-        element.removeEventListener("click", handleSubMenuClick);
-      });
-    };
-  }, [isMenu]);
-
-  // const toggleMenu = () => {
-  //   setisMenu(!isMenu);
-  //   if (document.getElementById("navigation")) {
-  //     const anchorArray = Array.from(
-  //       document.getElementById("navigation").getElementsByTagName("a")
-  //     );
-  //     anchorArray.forEach((element) => {
-  //       element.addEventListener("click", (elem) => {
-  //         const target = elem.target.getAttribute("href");
-  //         if (target !== "") {
-  //           if (elem.target.nextElementSibling) {
-  //             var submenu = elem.target.nextElementSibling.nextElementSibling;
-  //             submenu.classList.toggle("open");
-  //           }
-  //         }
-  //       });
-  //     });
-  //   }
-  // };
   return (
     <nav
       id="topnav"
@@ -159,7 +131,7 @@ const Navbar = ()  =>{
               </Link1>
             </li>
             <li className="has-submenu">
-              <Link
+              <Link1
                 href="#contactUs"
                 className="sub-menu-item"
                 spy={true}
@@ -168,7 +140,7 @@ const Navbar = ()  =>{
                 onClick={() => setModal(!modal)}
               >
                 Contact
-              </Link>
+              </Link1>
             </li>
           </ul>
         </div>
