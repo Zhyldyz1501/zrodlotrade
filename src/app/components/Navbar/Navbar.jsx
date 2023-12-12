@@ -21,26 +21,54 @@ const Navbar = ()  =>{
       document.body.scrollTop >= 50 || document.documentElement.scrollTop >= 50
     );
   }
-
   const toggleMenu = () => {
     setisMenu(!isMenu);
-    if (document.getElementById("navigation")) {
-      const anchorArray = Array.from(
-        document.getElementById("navigation").getElementsByTagName("a")
-      );
-      anchorArray.forEach((element) => {
-        element.addEventListener("click", (elem) => {
-          const target = elem.target.getAttribute("href");
-          if (target !== "") {
-            if (elem.target.nextElementSibling) {
-              var submenu = elem.target.nextElementSibling.nextElementSibling;
-              submenu.classList.toggle("open");
-            }
-          }
-        });
-      });
+  };
+
+  const handleSubMenuClick = (event) => {
+    const target = event.currentTarget.getAttribute("href");
+    if (target !== "") {
+      const submenu = event.currentTarget.nextElementSibling;
+      if (submenu) {
+        submenu.classList.toggle("open");
+      }
     }
   };
+
+  useEffect(() => {
+    const anchorArray = Array.from(
+      document.getElementById("navigation").getElementsByTagName("a")
+    );
+    anchorArray.forEach((element) => {
+      element.addEventListener("click", handleSubMenuClick);
+    });
+
+    return () => {
+      anchorArray.forEach((element) => {
+        element.removeEventListener("click", handleSubMenuClick);
+      });
+    };
+  }, [isMenu]);
+
+  // const toggleMenu = () => {
+  //   setisMenu(!isMenu);
+  //   if (document.getElementById("navigation")) {
+  //     const anchorArray = Array.from(
+  //       document.getElementById("navigation").getElementsByTagName("a")
+  //     );
+  //     anchorArray.forEach((element) => {
+  //       element.addEventListener("click", (elem) => {
+  //         const target = elem.target.getAttribute("href");
+  //         if (target !== "") {
+  //           if (elem.target.nextElementSibling) {
+  //             var submenu = elem.target.nextElementSibling.nextElementSibling;
+  //             submenu.classList.toggle("open");
+  //           }
+  //         }
+  //       });
+  //     });
+  //   }
+  // };
   return (
     <nav
       id="topnav"
@@ -132,7 +160,7 @@ const Navbar = ()  =>{
             </li>
             <li className="has-submenu">
               <Link
-                href="#aboutUs"
+                href="#contactUs"
                 className="sub-menu-item"
                 spy={true}
                 smooth={true}
@@ -174,13 +202,13 @@ const Navbar = ()  =>{
                   </button>
                 </div>
                 <div className="p-6 text-center">
-                  <div className="grid lg:grid-cols-12 lg:gap-6">
+                  <div className="grid lg:grid-cols-10 lg:gap-4">
                     <div className="lg:col-span-6 mb-5">
                       <div className="text-start">
                         <h1 className="font-semibold">Adress:</h1>
                         <div className="form-icon relative mt-2">
-                          <FaLocationArrow className="w-4 h-4 absolute top-3 start-4" />
-                          <h3 className="ps-11 w-full py-2 px-3 h-10">
+                          <FaLocationArrow className="w-4 h-4 absolute top-3 start-3" />
+                          <h3 className="ps-10 w-full py-2 px-3 h-10">
                             01-227, Warszawa, ul. Jana Szymczaka 1/LU 1.
                           </h3>
                         </div>
