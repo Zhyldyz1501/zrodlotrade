@@ -3,7 +3,7 @@ import Link from "next/link";
 import { Link as Link1 } from "react-scroll";
 import Image from "next/image";
 import * as Icon from "react-feather";
-import { FaEnvelope, FaLocationArrow, FaPhone} from "react-icons/fa";
+import { FaEnvelope, FaLocationArrow, FaPhone, FaRegEnvelope} from "react-icons/fa";
 
 const Navbar = ()  =>{
   const [isMenu, setisMenu] = useState(false);
@@ -21,6 +21,8 @@ const Navbar = ()  =>{
       document.body.scrollTop >= 50 || document.documentElement.scrollTop >= 50
     );
   }
+  const phoneNumber = "+48600793088";
+  const uri = `tel:${phoneNumber}`;
 
   const toggleMenu = () => {
     setisMenu(!isMenu);
@@ -191,10 +193,14 @@ const Navbar = ()  =>{
                       <div className="text-start">
                         <h1 className="font-semibold">Phone:</h1>
                         <div className="form-icon relative mt-2">
-                          <FaPhone className="w-4 h-4 absolute top-3 start-4" />
-                          <h3 className="ps-11 w-full py-2 px-3 h-10">
-                            +48 600 793 088
-                          </h3>
+                          <li className="inline">
+                            <Link href={uri} target="_blank">
+                              <FaPhone className="w-4 h-4 absolute top-3 start-4" />
+                              <h3 className="ps-11 w-full py-2 px-3 h-10">
+                                +48 600 793 088
+                              </h3>
+                            </Link>
+                          </li>
                         </div>
                       </div>
                     </div>
@@ -205,10 +211,19 @@ const Navbar = ()  =>{
                       <div className="text-start">
                         <h1 className="font-semibold">Email:</h1>
                         <div className="form-icon relative mt-2">
-                          <FaEnvelope className="w-4 h-4 absolute top-3 start-4" />
-                          <h3 className="ps-11 w-full py-2 px-3 h-10">
-                            zrodlotrade@gmail.com
-                          </h3>
+                          <li className="inline">
+                            <Link
+                              href="mailto:zrodlotrade@gmail.com"
+                              target="_blank"
+                            >
+                              <FaRegEnvelope
+                                className="w-4 h-4 absolute top-3 start-4  text-lg"
+                              />
+                              <h3 className="ps-11 w-full py-2 px-3 h-10">
+                                zrodlotrade@gmail.com
+                              </h3>
+                            </Link>
+                          </li>
                         </div>
                       </div>
                     </div>
