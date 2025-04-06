@@ -4,6 +4,7 @@ import { Link as Link1 } from "react-scroll";
 import Image from "next/image";
 import * as Icon from "react-feather";
 import { FaEnvelope, FaLocationArrow, FaPhone, FaRegEnvelope} from "react-icons/fa";
+import ReactCountryFlag from "react-country-flag";
 
 const Navbar = ()  =>{
   const [isMenu, setisMenu] = useState(false);
@@ -144,6 +145,30 @@ const Navbar = ()  =>{
                 Contact
               </Link1>
             </li>
+            {/* <li>
+              <div className="language-switcher">
+  {"   "}
+  <Link href="/" locale="pl">
+    <ReactCountryFlag 
+      countryCode="PL" 
+      svg 
+      style={{ width: '2em', height: '2em' }} 
+      title="Polish" 
+    />
+  </Link>
+  {"   "}
+  <Link href="/" locale="en">
+    <ReactCountryFlag 
+      countryCode="GB" 
+      svg 
+      style={{ width: '2em', height: '2em' }} 
+      title="British" 
+    />
+  </Link>
+</div>
+
+            </li> */}
+
           </ul>
         </div>
 

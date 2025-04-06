@@ -50,6 +50,57 @@ export const portfolioData = [
   },
 ];
 
+export const portfolioDataCargo = [
+  {
+      image: "/images/iStock-cargo.jpg",
+      name: "We deliver",
+      title: "",
+    },
+  {
+      image: "/images/international-air.webp",
+      name: "We care",
+      title:
+        "",
+    },
+  {
+    image:  "/images/cargo.jpg",
+    name: "We find best routes",
+    title: "",
+  },
+  {
+    image: "/images/air-cargo.jpg",
+    name: "Expected time - On time",
+    title:
+      "",
+  },
+];
+
+export const portfolioDataEquipment = [
+  {
+    image: "/images/pasterizator-005.png",
+    name: "Milk pasteurizer",
+    title: "This machine heats milk to a specific temperature for a set time to eliminate harmful bacteria while preserving its quality.",
+  },
+  {
+    image: "/images/separator-normalizator-25000litrov.jpg",
+    name: "25,000-Liter Milk Separator/Standardizer",
+    title:
+      "A machine that combines the functions of separating cream from milk and standardizing (adjusting) its fat content, with a capacity of 25,000 liters.",
+  },
+  {
+    image: "/images/normalizator.jpg",
+    name: "Milk standardizer",
+    title:
+      "A milk standardizer is used to adjust the fat content of milk to ensure consistency in quality across batches.",
+  },
+
+  {
+    image: "/images/press.jpg",
+    name: "Fruit press",
+    title: "These machines are designed to efficiently extract juice from fruits or vegetables, preserving the natural flavors and nutritional benefits",
+  },
+];
+
 export const servicesData = [
   {
     image: "/images/consulting.jpg",
@@ -92,6 +143,41 @@ export const clientsData = [
       "An invaluable partner! Zrodlo Trade played a huge role in facilitating meetings for the State Mortgage Company of Kyrgyz Republic in Europe",
     image: "/images/smc.png",
     name: "State Mortgage Company",
+    role: "",
+  },
+  {
+    description:
+      "As a company that regularly collaborates with Zrodlo Trade, we can confidently recommend their services. We purchase raw materials from them, and they always deliver on time, which is crucial for our operations. In the rare event of any shortages or defects, Zrodlo Trade promptly responds, offering assistance and compensation. Their reliability and professionalism make working with them a pleasure.",
+    image: "/images/CHESHEKA.png",
+    name: 'LLC "Cherkassy Silk Plant"',
+    role: "",
+  },
+  {
+    description:
+      "As a Turkish company that frequently purchases fabrics from Zrodlo Trade, we are extremely satisfied with the quality and timely delivery of their products. They always ensure that the fabrics arrive on time, and whenever there’s an issue, such as a shortage or defect, Zrodlo Trade is quick to offer support and compensation. Their commitment to customer satisfaction and professionalism has made them a trusted partner for our business",
+    image: "/images/gap-logo.png",
+    name: 'GAP Pazarlama AS',
+    role: "",
+  },
+  {
+    description:
+      "Working with Zrodlo Trade has been a very positive experience for us. The company stands out for its professionalism, flexibility, and commitment to every aspect of our collaboration. We can always rely on their support, and communication with the team is smooth and effortless. Thanks to Zrodlo Trade, we have been able to achieve many shared goals, making them a valuable partner in business.",
+    image: "/images/logo-tolpar.svg",
+    name: 'Tolpar Denizli Tekstil',
+    role: "",
+  },
+  {
+    description:
+      "As Belaya Reka, a company that purchased equipment, spare parts, and raw materials for our plant from Zrodlo Trade, we are very satisfied with the collaboration. All deliveries were made on time, and the quality of the products met our high standards. Zrodlo Trade demonstrated professionalism and reliability, which allows us to continue our fruitful partnership. We are glad to have such a trusted business partner.",
+    image: "/images/logo_kantsut.png",
+    name: 'LLC "BELAYA REKA"',
+    role: "",
+  },
+  {
+    description:
+      "As a cold pressed juice manufacturing company, we purchased equipment, spare parts, and raw materials from Zrodlo Trade, and we are very pleased with the cooperation. All deliveries were made on time, and the quality of the products met our expectations. Zrodlo Trade has proven to be a reliable and professional partner, and we look forward to continuing our successful collaboration. We are grateful to have such a trustworthy business partner.",
+    image: "/images/Лого-Эко продукт азия.svg",
+    name: 'LLC "Ecoproduct Asia',
     role: "",
   },
 ];

@@ -6,7 +6,6 @@ import { FaArrowRight } from "react-icons/fa";
 import { FiCamera } from "react-icons/fi";
 
 function Projects() {
-   console.log("data", servicesData);
   return (
     <div id="about" className="container relative md:mt-10 mt-3">
       <div className="grid grid-cols-1 pb-8 text-center">
@@ -18,11 +17,10 @@ function Projects() {
         </h3>
 
         <p className="text-slate-400 max-w-xl mx-auto">
-          Discover a world of possibilities with us! We provide tailored
-          solutions to meet your needs. From expert consulting to seamless
-          logistics, we offer comprehensive services designed to elevate your
-          business. Explore new opportunities and achieve success with our
-          dedicated support.
+          Discover a world of possibilities with us! From expert consulting to seamless
+          logistics, we offer comprehensive services:
+          <br/> 
+          Sale of Equipment and Spare Parts for Dairy and Soft Drink Production <br/> Agricultural Industrial Equipment  <br/> Fabrics and Yarns  <br/> Logistic services<br/> 
         </p>
       </div>
 

@@ -1,1 +1,1 @@
-self.__REACT_LOADABLE_MANIFEST="{}"
+self.__REACT_LOADABLE_MANIFEST="{\"app/components/ClientsOne/ClientsOne.jsx -> tiny-slider-react\":{\"id\":\"app/components/ClientsOne/ClientsOne.jsx -> tiny-slider-react\",\"files\":[\"static/chunks/_app-pages-browser_node_modules_tiny-slider-react_build_index_js.js\"]}}"

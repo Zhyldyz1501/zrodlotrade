@@ -42,17 +42,19 @@ const alex = Alex_Brush({
 });
 
 export const metadata = {
-  title: "Zrodlo Trade",
+  title: "Źródło Trade",
   description: "Make business with Zrodlo Trade",
+  icons: {
+    icon: "/favlogo.png", // relative to /public
+  },
+  
 };
-
 export default function RootLayout({ children }) {
   return (
     <html lang="en" dir="LTR">
       <body
         className={`${nunito.variable} ${work_sans.variable} ${eb_garamond.variable} ${kaushan.variable} ${alex.variable} font-nunito text-base text-black dark:text-white dark:bg-slate-900`}
-      >
-        {children}
+      >{children}
       </body>
     </html>
   );

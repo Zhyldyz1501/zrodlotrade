@@ -7,6 +7,8 @@ import Footer from "./components/Footer/Footer";
 import Switcher from "./components/Switcher/Switcher";
 import AboutUs from "./components/AboutUs/AboutUs";
 import Products from "./components/Products/Products";
+import Products_Avia from "./components/Products_Avia/Products_Avia"
+import Products_Equipment from "./components/Products_Equipment/Products_Equipment"
 import Projects from "./components/Projects/Projects";
 import ClientsOne from "./components/ClientsOne/ClientsOne";
 import GetInTouch from "./components/GetInTouch/GetInTouch";
@@ -14,7 +16,9 @@ import Video from "./components/Video/Video";
 import "../../node_modules/react-modal-video/css/modal-video.css";
 import "react-18-image-lightbox/style.css";
 
+
 function Home() {
+
   useEffect(() => {
     if (typeof window !== "undefined") {
       document.documentElement.classList.add("light");
@@ -57,7 +61,7 @@ function Home() {
               alt=""
             />
             <h4 className="text-white lg:text-5xl text-4xl lg:leading-normal leading-normal font-medium my-6 position-relative">
-              We Collaborate Easy & Fast
+            We Collaborate Easy & Fast
             </h4>
             <p className="text-white opacity-50 mb-0 max-w-xl text-lg mx-auto">
               Zrodlo Trade is your all-in-one answer to take your European
@@ -106,6 +110,12 @@ function Home() {
         />
         <div className=" md:mt-24 mt-16">
           <AboutUs id={""} className={"container relative"} />
+        </div>
+        <div className=" md:mt-24 mt-16">
+          <Products_Equipment id={""} className={"container relative"} />
+        </div>
+        <div className=" md:mt-24 mt-16">
+          <Products_Avia id={""} className={"container relative"} />
         </div>
         <div className=" md:mt-24 mt-16">
           <Products id={""} className={"container relative"} />

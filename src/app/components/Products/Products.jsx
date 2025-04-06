@@ -39,7 +39,7 @@ function Products() {
           Products
         </h6>
         <h3 className="mb-4 md:text-3xl md:leading-normal text-2xl leading-normal font-semibold">
-          Fabric & Yarns
+          Fabrics & Yarns
         </h3>
 
         <p className="text-slate-400 max-w-xl mx-auto">
